@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{good_info.name}}</title>
+</head>
+<body>
+    
+    <h1>{{good_info.name}}</h1>
+    <img src="{{good_info.image.url}}" alt="" class="image">
+    <p>{{good_info.price}}</p>
+    <p>{{good_info.description}}</p>
+    <a href="{% url 'add_to_cart' good_info.id%}">Купить</a>
+</body>
+</html>

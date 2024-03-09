@@ -1,0 +1,49 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'vendor/css/shop.css'%}"> 
+</head>
+<body>
+    <div class="contsht">
+        <div class="shtuka">
+            <img src="{%static 'vendor/img/blending1687548579848.svg'%}" alt=''></img>  
+        </div>
+        <div class="sht2">
+            <img src="{%static 'vendor/img/blending1687549622625.svg'%}" alt=""></img>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="title"><h1><span>В</span>ыберите категорию товара:</h1></div>
+        <div class="list-menu">
+            <ul>
+                <li><a href="/shop">Все</a></li>
+                {%for category in categorys%}
+                    <li><a href ='?category={{category.id}}'>{{category.name}}</a></li>
+                {% endfor %}
+                
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        {% for product in products %}
+        <a href="good/{{product.id}}">
+            <div class="product">
+                <h1>{{product.name}}</h1>
+                <img src="{{product.image.url}}" alt="" class="image">
+                <p>{{product.price}}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    
+    
+    
+</body>
+</html>

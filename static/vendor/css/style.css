@@ -1,0 +1,44 @@
+body{
+    background-image: url("https://cdn.fishki.net/upload/post/2021/04/05/3694471/4de2ab97437c0495ca6eff8ad331fac6.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+a{
+    text-decoration: none;
+}
+
+.about{
+
+    text-align: center;
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 40px;
+}
+
+.Alyona,.Mark,.Pasha,.Lilya{
+    height:100px;
+    width:20%;
+    background-color:whitesmoke;
+    float:left;
+    transition: 1s;
+}
+.Alyona p,.Mark p,.Pasha p,.Lilya p{
+    display:none;
+}
+.Alyona:hover{
+    height: 200px;
+   
+}
+.Alyona:hover p{
+    display:block;
+}
+.Mark:hover{
+    height: 200px;
+}
+.Pasha:hover{
+    height: 200px;
+}
+.Lilya:hover{
+    height: 200px;
+}

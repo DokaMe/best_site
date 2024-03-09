@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="{% static 'vendor/css/chich.css'%}">
+</head>
+
+<body>
+    <div class="joy">
+        <img class="flower" src="{% static 'vendor/img/flower.png' %}" alt="">
+        <img class="flower2" src="{% static 'vendor/img/flower.png' %}" alt="">
+        <img class="flower3" src="{% static 'vendor/img/flower3.png' %}" alt="">
+        
+        <img class="flower4" src="{% static 'vendor/img/flower4.png' %}" alt="">
+        <img class="flower5" src="{% static 'vendor/img/flower5.png' %}" alt="">
+        <img class="butterfly" src="{% static 'vendor/img/butterfly1.png' %}" alt="">
+    </div>
+    <div class="container">
+        
+        <div class="poems">
+            {%for poem in poems%}
+            <div class="poem" style="background: url('{{poem.img.url}}'); background-size: cover;">
+                {{poem.text}}
+            </div>
+           
+            {%endfor%}
+        </div>
+                
+    </div>
+    
+
+</body>
+
+</html>
