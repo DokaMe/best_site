@@ -1,0 +1,89 @@
+body{
+    background-color: red;
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.title h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #fcfffc;
+}
+.title span{
+    color: #f5b7c7;
+}
+.list-menu a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #fcfffc;
+    border-left: 2px solid #f5b7c7;
+    padding-left: 5px;
+    transition: all 0.2s ease;
+}
+
+.list-menu a:hover{
+    border-left: 2px solid #f5b7c7;
+    padding-left: 10px;
+    transition: all 0.2s ease;
+}
+.list-menu li{
+    margin: 20px 0;
+}
+.menu{
+    padding: 25vh 50px;
+    background: rgba (20,20,20,0.5);
+    height: 100vh;
+    backdrop-filter: blur(16px);
+    border-right: 7px solid #f5b7c7;
+    left: -670px;
+    position: fixed;
+    transition: all 0.2s ease;
+    z-index: 4; 
+}
+.menu:hover{
+    left: 0;
+    transition: all 0.2s ease;
+}
+
+.ul{
+    list-style-type: none;
+}
+.shtuka{
+    position: fixed;
+    top: 0;
+    width: 50%;
+    z-index: 0;
+}
+.sht2{
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 50%;
+    z-index: 1;
+}
+
+.container{
+    margin: 0 30px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    margin-bottom:40px;
+    background-color: red;
+    z-index: 2;
+}
+
+.image{
+    width:300px;
+}

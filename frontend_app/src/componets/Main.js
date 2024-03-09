@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import "../../static/css/glavn.css";
+import "./css/glavn.css";
 
 const Main = () => {
     const navigate = useNavigate();
