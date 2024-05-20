@@ -7,6 +7,7 @@ import It from "./It";
 import Texts from "./Texts";
 import Projects from "./Projects";
 import Test from "./Test";
+import PoemsSlide from "./poemsslide";
 // C://user/local
 // ./TestPage.js
 // ../index.js
@@ -26,6 +27,7 @@ export default class App extends Component {
                     <Route path="/texts" element={<Texts />} exact />
                     <Route path="/projects" element={<Projects />} exact />
                     <Route path="/test" element={<Test />} exact />
+                    <Route path="/poems" element={<PoemsSlide />} exact/>
                 </Routes>
             </BrowserRouter>
         );

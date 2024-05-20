@@ -5,6 +5,8 @@ import "./css/shop.css";
 const Shop = (props) => {
     const navigate = useNavigate();
     const [categorys, setCategory] = useState([]);
+    const [products, setProduct] = useState([]);
+
     useEffect(() => {
         // IObound - Нагрузка на интернет
         // CPUbound - Нагрузка на ЦПУ
@@ -13,8 +15,15 @@ const Shop = (props) => {
             .then((data) => setCategory(data))
             .catch((error) => console.log(error));
 
+        fetch("http://127.0.0.1:8000/old/api/product")
+            .then((response) => response.json())
+            .then((data) => setProduct(data))
+            .catch((error) => console.log(error));
+
         return () => {};
     }, []);
+
+    //useEffect(() => {что он делает}, [])
 
     return (
         <div>
@@ -36,7 +45,7 @@ const Shop = (props) => {
             </div>
             {/* {data.map((category)=> <p>category.name</p>)} */}
             <div className="menu">
-                <Link to="/">На главную</Link>
+                
                 <div className="title">
                     <h1>
                         <span>В</span>ыберите категорию товара:
@@ -55,27 +64,23 @@ const Shop = (props) => {
                                 </a>
                             </li>
                         ))}
-                        
                     </ul>
                 </div>
             </div>
             <div className="container">
-                {/* {products.map((product)=>(
-
-                ))} */}
-                {/* {% for product in products %} */}
-                <a href="good/{{product.id}}">
-                    <div className="product">
-                        {/* <h1>{{product.name}}</h1> */}
-                        <img
-                            src="{{product.image.url}}"
-                            alt=""
-                            className="image"
-                        ></img>
-                        {/* <p>{{product.price}}</p> */}
-                    </div>
-                </a>
-                {/* {% endfor %} */}
+                {products.map((product) => (
+                    <a href={`good/${product.id}`}>
+                        <div className="product">
+                            <h1>{product.name}</h1>
+                            <img
+                                src={`${product.image}`}
+                                alt=""
+                                className="image"
+                            />
+                            <p>{product.price}</p>
+                        </div>
+                    </a>
+                ))}
             </div>
         </div>
     );

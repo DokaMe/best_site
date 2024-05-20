@@ -10,4 +10,5 @@ urlpatterns=[
     path("texts/",test_react),
     path("projects/",test_react),
     path("test/",test_react),
+    path("poems/",test_react),
 ]

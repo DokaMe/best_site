@@ -1,6 +1,6 @@
 body{
     background-color: red;
-    overflow-x: hidden;
+    overflow-x: hidden;  
 }
 *{
     margin: 0;
@@ -10,7 +10,7 @@ body{
     box-sizing: border-box;
 }
 .title h1{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Doppelganger;
     font-size: 40px;
     margin-bottom: 50px;
     color: #fcfffc;
@@ -19,7 +19,6 @@ body{
     color: #f5b7c7;
 }
 .list-menu a{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     color: #fcfffc;
     border-left: 2px solid #f5b7c7;
@@ -36,6 +35,8 @@ body{
     margin: 20px 0;
 }
 .menu{
+    width: 680px;
+    font-family: Doppelganger;
     padding: 25vh 50px;
     background: rgba (20,20,20,0.5);
     height: 100vh;
@@ -84,6 +85,12 @@ body{
     z-index: 2;
 }
 
+
 .image{
     width:300px;
+}
+
+@font-face {
+    font-family: Doppelganger;
+    src: url('http://127.0.0.1:8000/static/fonts/Doppelganger_RUS.otf');
 }
