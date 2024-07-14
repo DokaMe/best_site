@@ -47,6 +47,10 @@ function PoemsSlide() {
                 <p>Это текст</p>
                 <p>Это текст</p>
             </div>
+            
+            <div className="books">
+                <img src="./static/images/sch.png"></img>
+            </div>
 
         </div>
        
