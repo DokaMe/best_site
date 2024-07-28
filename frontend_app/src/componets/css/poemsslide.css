@@ -3,6 +3,8 @@
 	background-color:#4B433A;
 	/* color:rgba(255,255,255); */
     height: 100vh;
+    width: 100vw;
+    
     
     
 	/*overflow:hidden;*/
@@ -13,7 +15,7 @@
     z-index: 20;
     color:#4B433A;
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
     cursor: none;
 
@@ -22,21 +24,34 @@
 
 .light {
     position: absolute;
-    width: 500px;
-    height: 500px;
-    /* background-color: #fff; */
+    width: 800px;
+    height: 800px;
+    background-color: #fff;
     z-index: 10;
     border-radius: 50%;
-    background: radial-gradient(circle, #76685a56, #453d33)
-    /* box-shadow: inset 0px 0px 20px 150px #4B433A; */ 
+    background: radial-gradient(circle, #9e94894f, #6f6a6526);
+    mix-blend-mode: lighten;
+    box-shadow: 0 0 50px 50px #4b433a4d, inset 0 0 50px 50px #3d383121;
+    cursor: none;
     
 }
 
-.books{
-    
-    height: 1500px;
-    right: 500px;
-    top: 200px;
+.img{
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
     position: absolute;
-    /* display: block; */
+    object-fit: cover;
 }
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #080808;
+    z-index: 3; /* Темный слой */
+    mix-blend-mode: multiply;
+  }

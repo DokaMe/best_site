@@ -28,8 +28,8 @@ const Slider = ({ images }) => {
                     <div className="slide" >
                       <PoemsSlide />
                     </div>
-                    <div className="slide" style={{backgroundColor:'green'}}>
-                      2
+                    <div className="slide" >
+                      <ShopSlide />
                     </div>
                     <div className="slide" style={{backgroundColor:'yellow'}}>
                       3

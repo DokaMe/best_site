@@ -21,38 +21,32 @@ function PoemsSlide() {
         };
     }, []);
     return (
-        <div className="maindiv">
-            <div className="light" style={{left: `${position.x}px`,top:`${position.y}px`}}></div>
-            <div className="content">
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-                <p>Это текст</p>
-            </div>
+        
             
-            <div className="books">
-                <img src="./static/images/sch.png"></img>
+           
+        <div className="maindiv">
+            
+                
+                
+            
+                
+            
+            <div className="overlay"></div>
+            <img src="./static/images/tut.png" className="img"/>
+            
+            < a href="./Texts.js"><div className="light" style={{left: `${position.x}px`,top:`${position.y}px`}}></div></a>
+            <div className="content">
+                    
+                
+                
             </div>
-
         </div>
+        
+        
+        
+            
+
+        
        
     );
 }
