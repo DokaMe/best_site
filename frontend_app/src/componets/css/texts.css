@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Soroka;
 }
 
 body{
@@ -65,4 +66,9 @@ body{
 .poem:hover{
     color: aliceblue;
     
+}
+
+@font-face {
+    font-family: Soroka;
+    src: url('../../../static/fonts/SOROKA.otf');
 }
