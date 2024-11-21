@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./css/slider.css";
 import PoemsSlide from "./poemsslide";
+import ShopSlide from "./shopslide";
 
 const Slider = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);

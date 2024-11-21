@@ -24,14 +24,14 @@
 
 .light {
     position: absolute;
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     background-color: #fff;
     z-index: 10;
     border-radius: 50%;
     background: radial-gradient(circle, #9e94894f, #6f6a6526);
     mix-blend-mode: lighten;
-    box-shadow: 0 0 50px 50px #4b433a4d, inset 0 0 50px 50px #3d383121;
+    box-shadow: 0 0 50px 50px #5d51444d, inset 0 0 50px 50px #312a1f21;
     cursor: none;
     
 }

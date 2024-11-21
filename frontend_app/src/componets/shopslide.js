@@ -3,7 +3,7 @@ import "./css/shopsslide.css";
 
 function ShopSlide() {
     return (
-        <img src="./static/images/shop.png" className="img"/>
+        < a href="./Shop.js"><img src="./static/images/shop.png" className="img"/></a>
             
         
     );
