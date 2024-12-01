@@ -1,74 +1,45 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Soroka;
-}
-
-body{
-
-    background-color:#403B4A;
-    width: 100vw;
-}
-.joy{
-    display: flex;
-    margin-top: 100px;
-    height: 200px;
-    background-color: rgb(164, 57, 57);
-    
-}
-.flower{
-    height: 120px;
-    width: 120px;
-    position: relative;
-    top: -50px;
-}
-.flower2{
-    height: 150px;
-    width: 150px;
-    position: relative;
-    top: 130px;
-    left: -70px;
-}
-.flower3{
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    right: 0;
-    top: 230px;
-}
-.flower4{
-    width: 250px;
-    position: absolute;
-    top: 0;
-    right: 50px;
-    transform: rotate(-45deg);
-}
-.flower5{
-    height: 250px;
-    
-    position: absolute;
-    top: 75px;
-    transform: rotate(45deg);
-}
-.butterfly{
-    height: 130px;
-    position: absolute;
-    top: 100px;
-    right: 0;
-}
-.poem{
-    width: 50vw;
-    height: 30vh ;
-    color: transparent;
-    background-size: contain;
-}
-
-.poem:hover{
-    color: aliceblue;
-    
-}
-
 @font-face {
     font-family: Soroka;
     src: url('../../../static/fonts/SOROKA.otf');
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container-texts{
+    background-image: url('../../../static/images/ulitsa.jpg');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.paper{
+    background-image: url('../../../static/images/paper.png');
+    background-size: cover;
+    padding: 6rem 5rem;
+    min-height: 800px;
+    width: 100vw;
+    
+    
+}
+.pig{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    height: 350px;
+    width: 350px;
+}
+.disco{
+    position: absolute;
+    top: 300px;
+    right: 100px;
+    height: 190px;
+    width: 200px;
+}
+.dudelka{
+    position: absolute;
+    top: 450px;
+    left: 30px;
+    height: 350px;
+    
 }

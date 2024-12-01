@@ -32,6 +32,7 @@ function PoemsSlide() {
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
         };
+        
     }, []);
     return (
         
