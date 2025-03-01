@@ -97,7 +97,7 @@ class GenreView(generics.ListAPIView):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
 
-class PoemView(generics.ListAPIView):
+class PoemView(generics.ListCreateAPIView):
     queryset = Poem.objects.all()
     serializer_class = PoemSerializer
 

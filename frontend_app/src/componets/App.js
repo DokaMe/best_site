@@ -8,6 +8,7 @@ import Texts from "./Texts";
 import Projects from "./Projects";
 import Test from "./Test";
 import Poems from "./poems";
+import AddPoem from "./AddPoem";
 
 // C://user/local
 // ./TestPage.js
@@ -30,6 +31,7 @@ export default class App extends Component {
                     <Route path="/texts/:id" element={<Poems />} /> 
                     <Route path="/projects" element={<Projects />} exact />
                     <Route path="/test" element={<Test />} exact />
+                    <Route path="/AddPoem" element={<AddPoem />} exact />
                 </Routes>
             </BrowserRouter>
         );
