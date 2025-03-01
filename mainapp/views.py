@@ -101,6 +101,13 @@ class PoemView(generics.ListAPIView):
     queryset = Poem.objects.all()
     serializer_class = PoemSerializer
 
+    def get(self, request, *args, **kwargs):
+        genre_id = request.GET.get('genre')
+        if genre_id:
+            self.queryset = self.queryset.filter(genre_id=genre_id)
+        return super().get(request, *args, **kwargs)
+
+    
 '''
 JSON - JavaScript Object notation
 {'persons':[{'name':'Вова'},{'name':'Даша'},{'name':'Cаша'}]}

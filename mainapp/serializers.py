@@ -21,9 +21,10 @@ class CartSerializer(serializers.ModelSerializer):
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
-        fields = ('name')
+        fields = ('id','name')
 
 class PoemSerializer(serializers.ModelSerializer):
-    class Meta:
+    genre_info = GenreSerializer()
+    class Meta: 
         model = Poem
-        fields = ('name','genre','author','text','img')
+        fields = ('name','author','text','img', 'genre', 'genre_info')

@@ -9,32 +9,48 @@
 }
 .container-texts{
     background-image: url('../../../static/images/ulitsa.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
     background-size: cover;
 }
 .paper{
-    background-image: url('../../../static/images/paper.png');
+    background-image: url('../../../static/images/paper-mini.png');
     background-size: cover;
+    background-position: center;
     padding: 6rem 5rem;
     min-height: 800px;
-    width: 100vw;
-    
-    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Soroka;
+    font-size: 3rem;
+    text-align: center;
+    color: #43270F;
+}
+.category{
+    margin: 10px;
+    padding: 5px;
 }
 .pig{
     position: absolute;
     top: 50px;
     right: 50px;
-    height: 350px;
-    width: 350px;
+    height: 450px;
+    width: 450px;
+    z-index: 1;
+
 }
 .disco{
     position: absolute;
-    top: 300px;
-    right: 100px;
-    height: 190px;
-    width: 200px;
+    top: 330px;
+    right: 30px;
+    height: 350px;
+    width: 350px;
+    z-index: 0;
 }
 .dudelka{
     position: absolute;
@@ -42,4 +58,19 @@
     left: 30px;
     height: 350px;
     
+}
+.luna{
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    height: 250px;
+    width: 250px;
+}
+
+@media (max-width: 768px){
+    .paper{
+        transform: rotate(90deg);
+        height: 300px;
+        width: 100px;
+    }
 }

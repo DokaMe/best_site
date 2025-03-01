@@ -7,8 +7,8 @@ import It from "./It";
 import Texts from "./Texts";
 import Projects from "./Projects";
 import Test from "./Test";
-import PoemsSlide from "./poemsslide";
-import ShopSlide from "./shopslide";
+import Poems from "./poems";
+
 // C://user/local
 // ./TestPage.js
 // ../index.js
@@ -17,6 +17,7 @@ export default class App extends Component {
     constructor(props) {
         super(props);
     }
+    
     // Document oriented model
     render() {
         return (
@@ -26,10 +27,9 @@ export default class App extends Component {
                     <Route path="/shop" element={<Shop />} exact />
                     <Route path="/it" element={<It />} exact />
                     <Route path="/texts" element={<Texts />} exact />
+                    <Route path="/texts/:id" element={<Poems />} /> 
                     <Route path="/projects" element={<Projects />} exact />
                     <Route path="/test" element={<Test />} exact />
-                    <Route path="/poems" element={<PoemsSlide />} exact/>
-                    <Route path="/shopslide" element={<ShopSlide />} exact/>
                 </Routes>
             </BrowserRouter>
         );

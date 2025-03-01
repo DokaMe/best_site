@@ -51,6 +51,12 @@ class Poem(models.Model):
 
     def __str__(self):
         return f'{self.id}. {self.name}'
+    
+    @property # то действие стало, как переменная
+    def genre_info(self):
+        genre = Genre.objects.get(id = self.genre_id)
+        return genre
+    
 
 
 

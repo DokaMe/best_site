@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
 }
@@ -10,7 +10,7 @@
 body{
     height: 100vh;
     background-image: url('/static/images/fon.jpeg');
-    /*background-size: contain;*/
+    background-size: contain;
     background-size: 100%;
 }
 .paper{
@@ -106,4 +106,4 @@ a{
     right: 10px;
     border-radius: 10%;
     background-color: rgba(245, 245, 245, 0.356);
-}
+} */
