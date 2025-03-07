@@ -32,7 +32,7 @@ const Slider = ({ images }) => {
                     <div className="slide" >
                       <ShopSlide />
                     </div>
-                    <div className="slide" style={{backgroundColor:'yellow'}}>
+                    <div className="slide">
                       3
                     </div>
             
