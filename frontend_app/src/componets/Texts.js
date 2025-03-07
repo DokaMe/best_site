@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./css/texts.css";
-import pig from "../../static/images/pig-no-bg-preview (carve.photos).png";
-import disco from "../../static/images/disco.png";
-import dudelka from "../../static/images/dudelka.png";
-import luna from "../../static/images/luna.png";
+import pig from "./images/pig-no-bg-preview (carve.photos).png";
+import disco from "./images/disco.png";
+import dudelka from "./images/dudelka.png";
+import luna from "./images/luna.png";
 
 import axios from "axios";
 import { useNavigate } from "react-router-dom";

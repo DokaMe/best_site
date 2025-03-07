@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/shopsslide.css";
+import shop from "./images/shop.png";
 import { useNavigate } from "react-router-dom";
 
 
@@ -12,8 +13,7 @@ function ShopSlide() {
     
     return (
         
-       
-        <img src="./static/images/shop.png" className="img" onClick={HandleClick}/>
+        <img src={shop} className="img" onClick={HandleClick}/>
         
     );
 

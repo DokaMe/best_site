@@ -91,5 +91,5 @@ body{
 
 @font-face {
     font-family: Doppelganger;
-    src: url('http://127.0.0.1:8000/static/fonts/Doppelganger_RUS.otf');
+    src: url('../fonts/Doppelganger_RUS.otf');
 }

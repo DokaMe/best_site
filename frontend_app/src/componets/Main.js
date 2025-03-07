@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import "./css/glavn.css";
 import Slider from "./g";
 
 const Main = () => {

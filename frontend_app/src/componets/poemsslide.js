@@ -1,5 +1,6 @@
 import React from "react";
 import "./css/poemsslide.css";
+import tut from './images/tut.png';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -42,7 +43,7 @@ function PoemsSlide() {
 
             
             <div className="overlay"></div>
-            <img src="./static/images/tut.png" className="img"/>
+            <img src={tut} className="img"/>
             
 
             <div className="light" style={{left: `${position.x}px`,top:`${position.y}px`}} onClick={handleClick}></div>
