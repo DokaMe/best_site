@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import FluidEffect from "./fluid";
+
 function AddPoem() {
     const [formData, setFormData] = useState({
         title: "",
@@ -42,12 +42,10 @@ function AddPoem() {
     }
 
     return (
-
         <div className="p-8 rounded-lg shadow-lg max-w-lg mx-auto mt-10 px-4 sm:px-6 lg:px-8">
             <h1 className="text-2xl font-semibold text-center text-gray-800 mb-6">
                 Добавить новое стихотворение:
             </h1>
-            <FluidEffect/>
             <form className="space-y-6">
                 <div>
                     <label className="block text-lg font-medium text-gray-700 mb-2">

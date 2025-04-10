@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./css/slider.css";
 import PoemsSlide from "./poemsslide";
 import ShopSlide from "./shopslide";
+import FluidEffect from "./fluid";
 
 const Slider = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,17 +26,15 @@ const Slider = ({ images }) => {
                 className="slider-content"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-                
-                    <div className="slide" >
-                      <PoemsSlide />
-                    </div>
-                    <div className="slide" >
-                      <ShopSlide />
-                    </div>
-                    <div className="slide">
-                      3
-                    </div>
-            
+                <div className="slide">
+                    <PoemsSlide />
+                </div>
+                <div className="slide">
+                    <ShopSlide />
+                </div>
+                <div className="slide">
+                    <FluidEffect />
+                </div>
             </div>
             <button className="next" onClick={nextSlide}>
                 &#10095;

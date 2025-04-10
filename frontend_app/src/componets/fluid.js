@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react"
 import { Renderer, Geometry, Program, Mesh, Vec2, Vec4, Texture, Flowmap } from "ogl"
-
+import "./css/fluid.css"
 
 export default function FluidEffect() {
-    const containerRef = useRef<HTMLDivElement>(null)
+    const containerRef = useRef(null)
 
     useEffect(() => {
         if (!containerRef.current) return
@@ -243,12 +243,12 @@ export default function FluidEffect() {
                         y="50%"
                         dominantBaseline="middle"
                         textAnchor="middle"
-                        fontSize="120"
+                        fontSize="200"
                         fontWeight="bold"
                         fontFamily="Roboto"
                         style={{ fillRule: "evenodd", clipRule: "evenodd" }}
                     >
-                        Проекты
+                        ПРОЕКТЫ
                     </text>
                 </svg>
             </div>
