@@ -19,6 +19,7 @@
 .paper{
     background-image: url('../images/paper-mini.png');
     background-size: cover;
+    flex-direction: column;
     background-position: center;
     padding: 6rem 5rem;
     min-height: 800px;
@@ -65,6 +66,16 @@
     left: 30px;
     height: 250px;
     width: 250px;
+}
+.add{
+    width: 50vw;
+}
+.add a{
+    color: #43270F;
+}
+.categ{
+    margin: 10px;
+    border-bottom: 3px #43270F solid;
 }
 
 @media (max-width: 768px){

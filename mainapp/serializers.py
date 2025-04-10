@@ -24,7 +24,7 @@ class GenreSerializer(serializers.ModelSerializer):
         fields = ('id','name')
 
 class PoemSerializer(serializers.ModelSerializer):
-    genre_info = GenreSerializer()
+    # genre_info = GenreSerializer()
     class Meta: 
         model = Poem
-        fields = ('name','author','text','img', 'genre', 'genre_info')
+        fields = ('name','author','text','img', 'genre')

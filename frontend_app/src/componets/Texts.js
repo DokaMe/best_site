@@ -32,12 +32,15 @@ function Texts() {
                   <img className="dudelka" src={dudelka} />
                   <img className="luna" src={luna} />
 
-                  <div>
+                  <div className="categ">
                       {categories.map((category) => (
                           <div class="category" onClick={() => {handleClick(category.id)}}>
                             {category.name}
                           </div>
                       ))}
+                  </div>
+                  <div className="add">
+                    <a href="/AddPoem">Добавить своё невероятное произведение искусства</a>
                   </div>
               </div>
           </div>

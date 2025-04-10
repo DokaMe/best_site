@@ -5,5 +5,5 @@ from frontend_app.views import test_react
 app_name = "frontend" 
 
 urlpatterns=[
-    re_path(r"^(?!.*\b(old|user|admin)\b).*", test_react)
+    re_path(r"^(?!.*\b(old|user|admin|media)\b).*", test_react)
 ]
