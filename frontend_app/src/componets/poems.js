@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./css/texts.css";
+import "./css/poems.css";
 
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -19,11 +19,17 @@ function Poems() {
       return (
           <div className="">
               {poems.map((poem) => (
-                <div key={poem.id} className="poem-card" style={{backgroundImage: `url(${poem.img})`}}>
+                <body>
+                 <div key={poem.id} className="poem-card">
+                  <div className="cont1">
                     <h2>{poem.name}</h2>
                     <p>{poem.text}</p>
+                  </div>
+                  <div className="img">
                     <img src={poem.img} />
+                  </div>
                 </div>
+              </body>
               ))}
           </div>
     ); 
