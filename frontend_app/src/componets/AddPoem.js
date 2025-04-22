@@ -42,92 +42,70 @@ function AddPoem() {
     }
 
     return (
-        <div className="p-8 rounded-lg shadow-lg max-w-lg mx-auto mt-10 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-2xl font-semibold text-center text-gray-800 mb-6">
-                Добавить новое стихотворение:
-            </h1>
-            <form className="space-y-6">
-                <div>
-                    <label className="block text-lg font-medium text-gray-700 mb-2">
-                        Заголовок:
-                    </label>
-                    <input
-                        type="text"
-                        name="title"
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                        placeholder="Введите заголовок"
-                    />
-                </div>
-
-                <div>
-                    <label className="block text-lg font-medium text-gray-700 mb-2">
-                        Автор:
-                    </label>
-                    <input
-                        type="text"
-                        name="author"
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                        placeholder="Введите имя автора"
-                    />
-                </div>
-
-                <div>
-                    <label className="block text-lg font-medium text-gray-700 mb-2">
-                        Контент:
-                    </label>
-                    <textarea
-                        onChange={handleChange}
-                        rows="5"
-                        name="text"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                        placeholder="Введите содержание стихотворения"
-                    />
-                </div>
-
-                <div>
-                    <label className="block text-lg font-medium text-gray-700 mb-2">
-                        Изображение:
-                    </label>
-                    <input
-                        type="file"
-                        name="img"
-                        accept="image/*"
-                        onChange={handleImage}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                    />
-                </div>
-
-                <div>
-                    <label className="block text-lg font-medium text-gray-700 mb-2">
-                        Жанр:
-                    </label>
-                    <select
-                        onChange={handleChange}
-                        name="genre"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                    >
-                        <option>Выберите жанр</option>
-                        {genres.map((genre) => (
-                            <option key={genre.id} value={genre.id}>
-                                {genre.name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-
-                <div>
-                    <input
-                        type="submit"
-                        value="Отправить"
-                        onClick={handleSubmit}
-                        className="w-full bg-red-500 text-white font-semibold py-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500"
-                    />
-                </div>
-            </form>
+        <div className="form-wrapper">
+          <h1 className="form-title">Добавить новое стихотворение:</h1>
+          <form className="space-y-6">
+            <div>
+              <label>Заголовок:</label>
+              <input
+                type="text"
+                name="title"
+                onChange={handleChange}
+                placeholder="Введите заголовок"
+              />
+            </div>
+      
+            <div>
+              <label>Автор:</label>
+              <input
+                type="text"
+                name="author"
+                onChange={handleChange}
+                placeholder="Введите имя автора"
+              />
+            </div>
+      
+            <div>
+              <label>Контент:</label>
+              <textarea
+                onChange={handleChange}
+                name="text"
+                placeholder="Введите содержание стихотворения"
+              />
+            </div>
+      
+            <div>
+              <label>Изображение:</label>
+              <input
+                type="file"
+                name="img"
+                accept="image/*"
+                onChange={handleImage}
+              />
+            </div>
+      
+            <div>
+              <label>Жанр:</label>
+              <select name="genre" onChange={handleChange}>
+                <option>Выберите жанр</option>
+                {genres.map((genre) => (
+                  <option key={genre.id} value={genre.id}>
+                    {genre.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+      
+            <div>
+              <input
+                type="submit"
+                value="Отправить"
+                onClick={handleSubmit}
+              />
+            </div>
+          </form>
         </div>
-    );
+      );
 }
 
 export default AddPoem;

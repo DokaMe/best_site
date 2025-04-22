@@ -17,15 +17,19 @@ function Poems() {
 
     if (poems){
       return (
-          <div className="">
-              {poems.map((poem) => (
-                <div key={poem.id} className="poem-card" style={{backgroundImage: `url(${poem.img})`}}>
-                    <h2>{poem.name}</h2>
-                    <p>{poem.text}</p>
-                    <img src={poem.img} />
-                </div>
-              ))}
+        <div className="poems-wrapper">
+        {poems.map((poem) => (
+          <div key={poem.id} className="poem-card">
+            <div className="poem-img">
+              <img src={poem.img} alt={poem.name} />
+            </div>
+            <div className="poem-text">
+              <h2>{poem.name}</h2>
+              <p>{poem.text}</p>
+            </div>
           </div>
+        ))}
+      </div>
     ); 
   
   } else {

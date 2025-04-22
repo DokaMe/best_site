@@ -225,33 +225,28 @@ export default function FluidEffect() {
     }, [])
 
     return (
-        <div className="relative w-full h-full">
-            <div ref={containerRef} className="w-full h-full"></div>
-            <div className="mask">
-                <svg
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                    x="0px"
-                    y="0px"
-                    viewBox="0 0 1040 205.1"
-                    style={{ enableBackground: "new 0 0 1040 205.1" }}
-                    xmlSpace="preserve"
-                >
-                    <text
-                        x="50%"
-                        y="50%"
-                        dominantBaseline="middle"
-                        textAnchor="middle"
-                        fontSize="200"
-                        fontWeight="bold"
-                        fontFamily="Roboto"
-                        style={{ fillRule: "evenodd", clipRule: "evenodd" }}
-                    >
-                        ПРОЕКТЫ
-                    </text>
-                </svg>
-            </div>
+        <div className="fluid-container">
+          <div ref={containerRef} className="fluid-canvas"></div>
+      
+          <div className="mask">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1040 205.1"
+              className="mask-text"
+            >
+              <text
+                x="50%"
+                y="50%"
+                dominantBaseline="middle"
+                textAnchor="middle"
+                fontSize="200"
+                fontWeight="bold"
+                fontFamily="Roboto"
+              >
+                ПРОЕКТЫ
+              </text>
+            </svg>
+          </div>
         </div>
-    )
+      );
 }

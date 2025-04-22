@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+body {
+  background-color: #f9f5f1;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  color: #4a3b31;
+}
+
+.form-wrapper {
+  background: #fff9f4;
+  border: 1px solid #e9ded6;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(140, 104, 66, 0.1);
+  padding: 2rem;
+  max-width: 700px;
+  margin: 3rem auto;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #6b4c3b;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  color: #5f4b3a;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="file"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d8c3b3;
+  border-radius: 12px;
+  background-color: #fffdfb;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #a67c52;
+  box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #a67c52;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #8b5e3c;
+}
