@@ -4,9 +4,13 @@ from django.shortcuts import render, HttpResponse, HttpResponseRedirect
 from mainapp.models import Product,Category,Poem,Cart
 from userapp.models import User
 from userapp.forms import UserLoginForm
-from rest_framework import generics
+from rest_framework import generics,status
 from .serializers import *
 from uuid import uuid4
+import os
+from openai import OpenAI
+from rest_framework.response import Response
+
 
 
 # Create your views here.
@@ -21,6 +25,8 @@ def main(request):
     # get - Отдает четко это элемент, если элементов не 1, то ошибка
     # print(list(Category.objects.all().values_list()))
     #Product.objects.create()
+    
+    
     return render(request, "thank_god.html")
 
 
@@ -106,6 +112,29 @@ class PoemView(generics.ListCreateAPIView):
         if genre_id:
             self.queryset = self.queryset.filter(genre_id=genre_id)
         return super().get(request, *args, **kwargs)
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        name = serializer.validated_data.get('name')
+        author = serializer.validated_data.get('author')
+        text = serializer.validated_data.get('text')
+        client = OpenAI(api_key=os.getenv('CHATGPT_TOKEN'))
+
+        response = client.responses.create(
+            model="gpt-4o-mini",
+            input=f"Пользователь прислал мне название:{name}. Имя автора:{author}. Текст :{text}. Ответь мне одним словом да, если этот текст является стихотворением, а не просто набором букв, в нем нет расизма, политики, мата. И словом нет в противном случае"
+        )   
+        print(response.output_text)
+        if 'да' in response.output_text.lower():
+            serializer.save()
+            return Response({'message': 'Стихотворение опубликовано'},status=status.HTTP_201_CREATED)
+        else:
+            return Response({'message':'Ваше стихотворение не прошло проверку (фу)'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        
+    
+
 
     
 '''

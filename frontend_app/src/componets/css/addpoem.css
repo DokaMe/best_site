@@ -1,75 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap');
+
+:root {
+  --cacao-bg: #d8c3a5;
+  --card-bg: #fdf6ec;
+  --text-color: #3e2723;
+  --input-bg: #fffaf0;
+  --border-color: #c1a57b;
+  --orange: #f4a261;
+  --orange-hover: #e76f51;
+}
 
 body {
-  background-color: #f9f5f1;
-  font-family: 'Merriweather', serif;
   margin: 0;
   padding: 0;
-  color: #4a3b31;
+  background-color: var(--cacao-bg);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .form-wrapper {
-  background: #fff9f4;
-  border: 1px solid #e9ded6;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(140, 104, 66, 0.1);
-  padding: 2rem;
-  max-width: 700px;
-  margin: 3rem auto;
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(62, 39, 35, 0.2);
+  max-width: 600px;
+  width: 90%;
+ 
 }
 
+
 .form-title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  color: #6b4c3b;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+form > div {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-  color: #5f4b3a;
   font-weight: 600;
-  display: block;
   margin-bottom: 0.5rem;
+  color: var(--text-color);
 }
 
 input[type="text"],
+input[type="file"],
 textarea,
-select,
+select {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  transition: 0.2s ease;
+}
+
 input[type="file"] {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #d8c3b3;
-  border-radius: 12px;
-  background-color: #fffdfb;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.4rem 0.5rem;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
 }
 
 input[type="text"]:focus,
 textarea:focus,
 select:focus {
+  border-color: var(--orange);
+  background-color: #fff;
   outline: none;
-  border-color: #a67c52;
-  box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.2);
 }
 
-textarea {
-  resize: vertical;
-  min-height: 100px;
+.btn {
+  display: flex;
+  justify-content: center;
 }
 
-input[type="submit"] {
-  background-color: #a67c52;
+.btn-primary input[type="submit"] {
+  background-color: var(--orange);
   color: white;
-  font-weight: 600;
-  padding: 0.75rem;
   border: none;
-  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
-input[type="submit"]:hover {
-  background-color: #8b5e3c;
+.btn-primary input[type="submit"]:hover {
+  background-color: var(--orange-hover);
+}
+
+div.answer {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f1f8e9;
+  color: #2e7d32;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
 }

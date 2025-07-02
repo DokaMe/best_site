@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./css/addpoem.css";
 
 function AddPoem() {
     const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ function AddPoem() {
         text: "",
     });
     const [genres, setGenre] = useState([]);
+    const [answer, setAnswer] = useState('');
     useEffect(() => {
         axios.get("old/api/genre").then((value) => {
             console.log(value.data);
@@ -35,10 +37,9 @@ function AddPoem() {
         newpoem.append("text", formData.text);
         newpoem.append("img", formData.img);
         newpoem.append("genre", formData.genre);
-
         axios.post("/old/api/poem/", newpoem, {
             headers: { "Content-Type": "multipart/form-data" },
-        });
+        }).then((response) => {setAnswer(response.data.message)}, ()=>{});
     }
 
     return (
@@ -96,7 +97,7 @@ function AddPoem() {
               </select>
             </div>
       
-            <div>
+            <div className="btn btn-primary">
               <input
                 type="submit"
                 value="Отправить"
@@ -104,6 +105,7 @@ function AddPoem() {
               />
             </div>
           </form>
+          {answer && <div>{answer}</div>}
         </div>
       );
 }
